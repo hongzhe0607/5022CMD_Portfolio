@@ -1,0 +1,39 @@
+Python 3.13.16 | GIL enabled: True
+
+=== Fibonacci Computation (With Multithreading) ===
+Round  1: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,769,988,659 ns
+Round  2: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,977,106,697 ns
+Round  3: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,239,130,206 ns
+Round  4: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 19,965,419,629 ns
+Round  5: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,700,516,655 ns
+Round  6: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,298,038,228 ns
+Round  7: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,291,366,915 ns
+Round  8: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,915,625,541 ns
+Round  9: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,395,102,527 ns
+Round 10: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 19,995,005,441 ns
+Average T (With Multithreading): 20,454,730,050 ns  (20.455 s)
+Fastest: 19,965,419,629 ns | Slowest: 20,977,106,697 ns
+
+=== Fibonacci Computation (Without Multithreading) ===
+Round  1: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,347,124,374 ns
+Round  2: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,555,764,504 ns
+Round  3: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,427,318,750 ns
+Round  4: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,480,087,217 ns
+Round  5: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 19,907,983,071 ns
+Round  6: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 19,787,781,811 ns
+Round  7: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 19,820,042,795 ns
+Round  8: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,853,513,833 ns
+Round  9: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 19,864,551,657 ns
+Round 10: Fib(35)=9227465, Fib(38)=39088169, Fib(40)=102334155 | T = 20,102,337,429 ns
+Average T (Without Multithreading): 20,214,650,544 ns  (20.215 s)
+Fastest: 19,787,781,811 ns | Slowest: 20,853,513,833 ns
+
+=== Summary ===
+Average with multithreading   : 20,454,730,050 ns
+Average without multithreading: 20,214,650,544 ns
+Observation: Multithreading was 1.2% SLOWER on average (CPU-bound work + GIL = no parallel speed-up).
+
+=== Extra demo: I/O-bound task (simulated 1-second downloads) ===
+Without threads: 3,000,460,793 ns
+With threads   : 1,000,756,492 ns
+Multithreading reduced the time by 66.6%
